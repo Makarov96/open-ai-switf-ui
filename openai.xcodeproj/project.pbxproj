@@ -14,6 +14,8 @@
 		E17831732A2039C600DFF263 /* openaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17831722A2039C600DFF263 /* openaiTests.swift */; };
 		E178317D2A2039C600DFF263 /* openaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178317C2A2039C600DFF263 /* openaiUITests.swift */; };
 		E178317F2A2039C600DFF263 /* openaiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178317E2A2039C600DFF263 /* openaiUITestsLaunchTests.swift */; };
+		E178318D2A203A1D00DFF263 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = E178318C2A203A1D00DFF263 /* OpenAIKit */; };
+		E17DD1AC2A23BCDF00AC4371 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = E17DD1AB2A23BCDF00AC4371 /* SVGKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17DD1AC2A23BCDF00AC4371 /* SVGKit in Frameworks */,
+				E178318D2A203A1D00DFF263 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,10 @@
 			dependencies = (
 			);
 			name = openai;
+			packageProductDependencies = (
+				E178318C2A203A1D00DFF263 /* OpenAIKit */,
+				E17DD1AB2A23BCDF00AC4371 /* SVGKit */,
+			);
 			productName = openai;
 			productReference = E178315E2A2039C500DFF263 /* openai.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,10 @@
 				Base,
 			);
 			mainGroup = E17831552A2039C500DFF263;
+			packageReferences = (
+				E178318B2A203A1D00DFF263 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+				E17DD1AA2A23BCDF00AC4371 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = E178315F2A2039C500DFF263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +595,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E178318B2A203A1D00DFF263 /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MarcoDotIO/OpenAIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E17DD1AA2A23BCDF00AC4371 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E178318C2A203A1D00DFF263 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E178318B2A203A1D00DFF263 /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+		E17DD1AB2A23BCDF00AC4371 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17DD1AA2A23BCDF00AC4371 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E17831562A2039C500DFF263 /* Project object */;
 }
